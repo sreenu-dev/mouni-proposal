@@ -1,0 +1,16 @@
+
+
+
+<router-outlet />
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card p-5">
+    <h1>{{ title }}</h1>
+    <div class="buttons" *ngIf="!saidYes">
+      <div class="btn btn-primary" (click)="onYes()">YES! ❤️</div>
+      <div class="btn btn-danger" (mouseenter)="moveNoButton()" [style.position]="'absolute'" [style.left.px]="noLeft" [style.top.px]="noTop">No</div>
+    </div>
+    <div *ngIf="saidYes">
+      <img style="width: 15rem;margin-left: 12rem;" src="../assets/us.jpg" alt="">
+    </div>
+  </div>
+</div>
